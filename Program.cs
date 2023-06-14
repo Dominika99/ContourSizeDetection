@@ -11,7 +11,7 @@ namespace SizeDetection
 
         static void Main(string[] args)
         {
-            Mat image = Cv2.ImRead(@"C:\Users\Laptop\Desktop\ubytki-w-betonie.jpg");
+            Mat image = Cv2.ImRead(@"C:\...\...\...\ubytki-w-betonie.jpg");
 
             Point[][] contours = GetAllContours(image);
             Mat imageClone = image.Clone();
@@ -46,7 +46,7 @@ namespace SizeDetection
             // Zwalnianie zasobów i zwolnienie wskaźnika IntPtr
             gcHandle.Free();
 
-            string outputImagePath = @"C:\Users\Laptop\Desktop\krawedzie\2.jpg";
+            string outputImagePath = @"C:\...\...\...\krawedzie\2.jpg";
             Cv2.ImWrite(outputImagePath, imageClone);
         }
 
